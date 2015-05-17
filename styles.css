@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body,
+textarea,
+pre {
+	color: #555;
+	font-size: 1em;
+	font-family: 'Fira Mono', sans-serif;
+	line-height: 1.5;
+}
+
+.input,
+.output {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	padding: 1em;
+	width: 50%;
+}
+
+.input {
+	left: 0;
+	border: none;
+	background: #402D3A;
+	color: #fff;
+}
+
+.output {
+	right: 0;
+	overflow: scroll;
+	white-space: pre-wrap;
+}
+
+mark,
+dfn {
+	padding-right: .2em;
+	padding-left: .2em;
+	color: inherit;
+}
+
+mark {
+	background-color: rgba(233, 30, 99, 0.2);
+	text-decoration: line-through;
+}
+
+mark:before {
+	content: attr(data-omit);
+}
+
+dfn {
+	background-color: rgba(133, 194, 38, 0.74);
+}
