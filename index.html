@@ -14,7 +14,7 @@
 <script src="omit.js"></script>
 </head>
 <body>
-<textarea class="input" placeholder="Feed the copy machine." ng-model="copier"></textarea>
+<textarea autofocus class="input" placeholder="Feed the copy machine." ng-model="copier"></textarea>
 <pre class="output" ng-bind-html="copier | machine:copier"></pre>
 <script>
 var app = angular.module('copy-machine',[]);
