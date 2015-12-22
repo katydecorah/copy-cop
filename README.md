@@ -1,5 +1,6 @@
-# copy-machine
-:pencil: Put copy in get plain language out
+# copy-cop
+
+:cop: Put copy in. Get plain language out.
 
 ## Resources
 

@@ -7,9 +7,9 @@
 body,
 textarea,
 pre {
-	color: #555;
+	color: $text-color;
 	font-size: 1em;
-	font-family: 'Fira Mono', sans-serif;
+	font-family: $font-family;
 	line-height: 1.5;
 }
 
@@ -25,8 +25,8 @@ pre {
 .input {
 	left: 0;
 	border: none;
-	background: #402D3A;
-	color: #fff;
+	background: $input-bg;
+	color: $input-color;
 }
 
 .output {
@@ -43,14 +43,15 @@ dfn {
 }
 
 mark {
-	background-color: rgba(233, 30, 99, 0.2);
-	text-decoration: line-through;
+	background-color: $error;
 }
 
 mark:before {
 	content: attr(data-omit);
 }
 
+.omit { text-decoration: line-through; }
+
 dfn {
-	background-color: rgba(133, 194, 38, 0.74);
+	background-color: $swap;
 }

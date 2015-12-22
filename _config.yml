@@ -1,0 +1,15 @@
+title: Copy cop
+description: Put copy in. Get plain language out.
+
+baseurl: /copy-cop
+markdown: kramdown
+sass:
+  style: :compressed
+
+author: 
+  name: Katy DeCorah
+  email: katydecorah@gmail.com
+  uri: http://katydecorah.com
+
+angularjs: 1.4.8
+

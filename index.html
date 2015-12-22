@@ -1,34 +1,22 @@
+---
+
+---
 <!doctype html>
-<html lang="en" ng-app="copy-machine">
+<html lang="en" ng-app="copy-cop">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Put copy in get plain language out.">
-<meta name="author" content="">
-<title>Copy machine &times; put copy in get plain language out.</title>
+<meta name="description" content="{{site.description}}">
+<meta name="author" content="{{site.author.name}}">
+<title>{{site.title}} &times; {{site.description}}</title>
 <link href='http://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
-<script src="swap.js"></script>
-<script src="omit.js"></script>
+<link rel="stylesheet" href="{{site.baseurl}}/css/style.css" charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/{{site.angularjs}}/angular.min.js"></script>
+<script src="{{site.baseurl}}/js/app.js"></script>
 </head>
 <body>
-<textarea autofocus class="input" placeholder="Feed the copy machine." ng-model="copier"></textarea>
+<textarea autofocus class="input" placeholder="Drop copy here." ng-model="copier"></textarea>
 <pre class="output" ng-bind-html="copier | machine:copier"></pre>
-<script>
-var app = angular.module('copy-machine',[]);
-app.filter('machine', function($sce) {
-return function(text) {
-	omit.forEach(function(a){
-		if (text) text = text.split(RegExp("\\b"+a+"\\b","i")).join("<mark data-omit='"+a+"'></mark>");
-	});
-	for (var key in swap) {
-		if (text) text = text.split(RegExp("\\b"+key+"\\b","i")).join("<mark data-omit='"+key+"'></mark><dfn>"+swap[key]+"</dfn>");
-	}
-	return $sce.trustAsHtml(text);
-}
-});
-</script>
 </body>
 </html>
